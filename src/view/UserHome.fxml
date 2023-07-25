@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <children>
+        <Label alignment="CENTER" layoutX="271.0" layoutY="14.0" style="&#10;" text="Album Home" textAlignment="CENTER" wrapText="false">
+          <font>
+            <Font size="18.0" />
+          </font>
+        </Label>
+        <ListView fx:id="albumList" layoutX="14.0" layoutY="37.0" prefHeight="313.0" prefWidth="200.0" />
+        <Button fx:id="createButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Create" />
+        <Button fx:id="deleteButton" layoutX="85.0" layoutY="361.0" mnemonicParsing="false" text="Delete" />
+        <Button fx:id="renameButton" layoutX="152.0" layoutY="361.0" mnemonicParsing="false" text="Rename" />
+        <Text fx:id="albumNameText" layoutX="271.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Album Name" />
+        <Text fx:id="numPhotosText" layoutX="271.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of Photos" />
+        <Text fx:id="dateRangeText" layoutX="271.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Range of Dates" />
+        <Button fx:id="openButton" layoutX="271.0" layoutY="225.0" mnemonicParsing="false" text="Open" />
+        <Button fx:id="logoutButton" layoutX="563.0" layoutY="348.0" mnemonicParsing="false" text="Logout" textFill="#c30000" />
+        <Button fx:id="searchButton" layoutX="327.0" layoutY="226.0" mnemonicParsing="false" text="Search" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

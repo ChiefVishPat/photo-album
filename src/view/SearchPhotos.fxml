@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchController">
+    <top>
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem fx:id="backButton" text="Back" />
+                <MenuItem fx:id="logoutButton" text="Logout" />
+            </Menu>
+        </MenuBar>
+    </top>
+    <center>
+        <SplitPane>
+            <VBox fx:id="searchOptionsBox" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+                <Label text="Search by date range:" />
+                <HBox spacing="10.0">
+                    <Label text="From:" />
+                    <TextField fx:id="fromDateField" promptText="MM/dd/yyyy" />
+                    <Label text="To:" />
+                    <TextField fx:id="toDateField" promptText="MM/dd/yyyy" />
+                   <Button fx:id="dateSearchButton" text="Search" />
+                </HBox>
+                <Label text="Search by tag type-value pairs:" />
+                <VBox fx:id="tagSearchBox" spacing="10.0">
+                    <HBox spacing="10.0">
+                        <TextField fx:id="tagValue1TextField" prefWidth="150.0" promptText="Tag Value" />
+                        <RadioButton fx:id="andRadioButton" mnemonicParsing="false" text="AND" toggleGroup="$toggleGroup" />
+                        <RadioButton fx:id="orRadioButton" mnemonicParsing="false" text="OR" toggleGroup="$toggleGroup" />
+                        <TextField fx:id="tagValue2TextField" prefWidth="150.0" promptText="Tag Value" />
+                        <Button fx:id="tagSearchButton" text="Search" />
+                    </HBox>
+                    <HBox fx:id="tagTypeValue2HBox" spacing="10.0" />
+                </VBox>
+            <ScrollPane fx:id="photoScrollPane" prefHeight="360.0" prefWidth="798.0">
+                <VBox fx:id="photoVBox" prefWidth="500" prefHeight="500"/>
+            </ScrollPane>
+            </VBox>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0">
+            <Button fx:id="createAlbumButton" text="Create" />
+        </HBox>
+    </bottom>
+</BorderPane>
